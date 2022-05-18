@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         val rickAndMortyService : RickAndMortyService = retrofit.create(RickAndMortyService::class.java)
         //enqueue lets us know when the call is done
         //asynchronous call will crash app from main thread so we use enqueue to report response/error
-        rickAndMortyService.getCharacterByID().enqueue(object: Callback<GetCharacterByIdResponse>{
+        rickAndMortyService.getCharacterByID(10).enqueue(object: Callback<GetCharacterByIdResponse>{
             //we must implement pass and fail abstract methods for callbacks
             override fun onResponse(call: Call<GetCharacterByIdResponse>, response: Response<GetCharacterByIdResponse>) {
                 Log.i("Main Activity", response.toString())
