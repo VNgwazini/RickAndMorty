@@ -63,13 +63,13 @@ class MainActivity : AppCompatActivity() {
                 val image = body.image
 //                val type = body.type
 
-                //check gender to display corresponding icon
-                if(body.gender.equals("male", true)){
-
-                }
-                else{
-
-                }
+//                //check gender to display corresponding icon
+//                if(body.gender.equals("male", true)){
+//
+//                }
+//                else{
+//
+//                }
 
                 Toast.makeText(this@MainActivity, "Successful Network Call!", Toast.LENGTH_SHORT).show()
 
