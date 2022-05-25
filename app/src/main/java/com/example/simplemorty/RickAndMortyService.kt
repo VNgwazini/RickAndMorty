@@ -1,5 +1,6 @@
 package com.example.simplemorty
 import retrofit2.Call
+import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
 
@@ -9,7 +10,7 @@ interface RickAndMortyService {
     @GET("character/{character-id}")
     //we return an object that we defined that corresponds to the id passed
     //@Path replaces character-id with an actual value, in this case, an Int
-    fun getCharacterByID(
+    suspend fun getCharacterByID(
         @Path("character-id") characterId: Int
-    ): Call<GetCharacterByIdResponse>
+    ): Response<GetCharacterByIdResponse>
 }
