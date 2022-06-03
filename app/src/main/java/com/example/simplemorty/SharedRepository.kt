@@ -10,15 +10,15 @@ class SharedRepository {
     suspend fun getCharacterById(characterId : Int): GetCharacterByIdResponse? {
         //this is where we trigger the actual call that we use to populate our object
         val request = NetworkLayer.apiClient.getCharacterById(characterId)
-
-        //now handle our request (pass and fail)
-        if(request.isSuccessful){
-            //its possible that this request is null, but we don't want to access a null object,
-            // so lets make it non-null
-            return request.body()!!
+        //out of network
+        if(request.failed){
+            return null;
         }
-        else{
+        //now handle our request (pass and fail)
+        if(!request.isSuccessful){
             return null
         }
+        //successful request
+        return request.body
     }
 }
