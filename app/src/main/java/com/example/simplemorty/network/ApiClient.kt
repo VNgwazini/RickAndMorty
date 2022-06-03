@@ -1,5 +1,6 @@
-package com.example.simplemorty
+package com.example.simplemorty.network
 
+import com.example.simplemorty.network.response.GetCharacterByIdResponse
 import retrofit2.Response
 
 class ApiClient(
@@ -10,7 +11,7 @@ class ApiClient(
         return safeApiCal { rickAndMortyService.getCharacterByID(characterId) }
     }
 
-    private inline fun <T> safeApiCal(apiCall: () -> Response<T>) : SimpleResponse<T>{
+    private inline fun <T> safeApiCal(apiCall: () -> Response<T>) : SimpleResponse<T> {
         return try {
             SimpleResponse.success(apiCall.invoke())
         }catch (e: Exception){

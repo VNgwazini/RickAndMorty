@@ -1,6 +1,8 @@
 package com.example.simplemorty
 
-import retrofit2.Response
+import com.example.simplemorty.network.response.GetCharacterByIdResponse
+import com.example.simplemorty.network.NetworkLayer
+
 //This is where the data lives after the network call
 class SharedRepository {
     //since the api client uses a coroutine (suspend), we can only call it from a coroutine

@@ -1,17 +1,14 @@
-package com.example.simplemorty
+package com.example.simplemorty.view
 
 import android.os.Bundle
-import android.util.Log
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import com.squareup.moshi.Moshi
-import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
+import com.example.simplemorty.R
+import com.example.simplemorty.viewmodel.SharedViewModel
 import com.squareup.picasso.Picasso
-import retrofit2.*
-import retrofit2.converter.moshi.MoshiConverterFactory
 import kotlin.random.Random
 
 

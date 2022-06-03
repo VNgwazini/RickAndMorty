@@ -1,9 +1,11 @@
-package com.example.simplemorty
+package com.example.simplemorty.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.simplemorty.SharedRepository
+import com.example.simplemorty.network.response.GetCharacterByIdResponse
 import kotlinx.coroutines.launch
 
 //MVVM structure

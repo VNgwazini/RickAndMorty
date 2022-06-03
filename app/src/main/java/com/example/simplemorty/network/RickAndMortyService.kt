@@ -1,5 +1,5 @@
-package com.example.simplemorty
-import retrofit2.Call
+package com.example.simplemorty.network
+import com.example.simplemorty.network.response.GetCharacterByIdResponse
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path

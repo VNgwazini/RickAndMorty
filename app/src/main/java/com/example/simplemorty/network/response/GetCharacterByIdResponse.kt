@@ -1,4 +1,7 @@
-package com.example.simplemorty
+package com.example.simplemorty.network.response
+
+import com.example.simplemorty.viewmodel.Location
+import com.example.simplemorty.viewmodel.Origin
 
 data class GetCharacterByIdResponse(
     val created: String,
