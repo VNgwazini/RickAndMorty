@@ -1,4 +1,4 @@
-package com.example.simplemorty.view
+package com.example.simplemorty.character.details.view
 
 import android.os.Bundle
 import android.widget.ImageView
@@ -7,7 +7,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.simplemorty.R
-import com.example.simplemorty.viewmodel.SharedViewModel
+import com.example.simplemorty.character.details.viewmodel.SharedViewModel
 import com.squareup.picasso.Picasso
 import kotlin.random.Random
 
@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_detail)
 
         //added 'textView' as id to hello world text view from homescreen
         val tvName = findViewById<TextView>(R.id.tv_name)

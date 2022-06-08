@@ -1,7 +1,7 @@
 package com.example.simplemorty.network.response
 
-import com.example.simplemorty.viewmodel.Location
-import com.example.simplemorty.viewmodel.Origin
+import com.example.simplemorty.character.details.viewmodel.Location
+import com.example.simplemorty.character.details.viewmodel.Origin
 
 data class GetCharacterByIdResponse(
     val created: String,

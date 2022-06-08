@@ -1,4 +1,4 @@
-package com.example.simplemorty.viewmodel
+package com.example.simplemorty.character.details.viewmodel
 
 data class Origin(
     val name: String,

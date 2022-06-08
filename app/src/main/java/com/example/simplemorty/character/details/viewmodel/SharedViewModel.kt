@@ -1,4 +1,4 @@
-package com.example.simplemorty.viewmodel
+package com.example.simplemorty.character.details.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
