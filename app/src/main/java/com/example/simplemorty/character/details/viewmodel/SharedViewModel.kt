@@ -17,10 +17,10 @@ class SharedViewModel: ViewModel()  {
     //TODO make nullable for now, handle later
     private val _characterByIdLiveData = MutableLiveData<GetCharacterByIdResponse?>()
     //second live data is immutable since we only want to be able to view this data via the observer
-    val characterByIdResponse: LiveData<GetCharacterByIdResponse?> = _characterByIdLiveData
+    val characterByIdLiveData: LiveData<GetCharacterByIdResponse?> = _characterByIdLiveData
 
     fun refreshCharacter(characterId: Int){
-        //get new updated values
+        //get new updated values via coroutine
         viewModelScope.launch {
             val response = repository.getCharacterById(characterId )
             //now update object with values

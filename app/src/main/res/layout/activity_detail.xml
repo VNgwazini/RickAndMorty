@@ -19,120 +19,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/tv_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="16dp"
-                android:text="@string/name"
-                android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:textSize="34sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toTopOf="@id/tv_gender"/>
-
-            <TextView
-                android:id="@+id/tv_gender"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-                android:text="@string/gender"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:textSize="34sp"
-                app:layout_constraintBottom_toTopOf="@id/iv_image"
-                app:layout_constraintEnd_toEndOf="@id/tv_name"
-                app:layout_constraintStart_toStartOf="@id/tv_name"
-                app:layout_constraintTop_toBottomOf="@+id/tv_name" />
-
-            <TextView
-                android:id="@+id/tv_location"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="@string/location"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:textSize="24sp"
-                app:layout_constraintBottom_toTopOf="@id/tv_firstSeenIn"
-                app:layout_constraintEnd_toEndOf="@id/tv_name"
-                app:layout_constraintStart_toStartOf="@id/tv_name"
-                app:layout_constraintTop_toBottomOf="@+id/tv_lastKnownLocation" />
-
-
-            <TextView
-                android:id="@+id/tv_origin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="16dp"
-                android:text="@string/origin"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:textSize="24sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@id/tv_name"
-                app:layout_constraintStart_toStartOf="@id/tv_name"
-                app:layout_constraintTop_toBottomOf="@+id/tv_firstSeenIn" />
-
-            <TextView
-                android:id="@+id/tv_status"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="@string/status"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:textSize="34sp"
-                android:textStyle="italic"
-                app:layout_constraintBottom_toTopOf="@+id/tv_lastKnownLocation"
-                app:layout_constraintEnd_toEndOf="@id/tv_name"
-                app:layout_constraintStart_toStartOf="@id/tv_name"
-                app:layout_constraintTop_toBottomOf="@id/iv_image" />
-
-            <ImageView
-                android:id="@+id/iv_image"
+            <com.airbnb.epoxy.EpoxyRecyclerView
+                android:id="@+id/epoxyRecyclerView"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_marginTop="16dp"
-                android:contentDescription="@string/image"
-                android:scaleType="centerCrop"
-                app:layout_constraintBottom_toTopOf="@id/tv_status"
-                app:layout_constraintDimensionRatio="1:1"
-                app:layout_constraintEnd_toEndOf="@id/tv_gender"
-                app:layout_constraintStart_toStartOf="@id/tv_gender"
-                app:layout_constraintTop_toBottomOf="@+id/tv_gender"
-                tools:ignore="ImageContrastCheck"
-                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
 
-            <TextView
-                android:id="@+id/tv_lastKnownLocation"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="@string/last_known_location"
-                android:textSize="34sp"
-                android:textStyle="italic"
-                app:layout_constraintBottom_toTopOf="@+id/tv_location"
-                app:layout_constraintEnd_toEndOf="@id/tv_name"
-                app:layout_constraintStart_toStartOf="@id/tv_name"
-                app:layout_constraintTop_toBottomOf="@+id/tv_status"
-                tools:layout_editor_absoluteX="176dp" />
-
-            <TextView
-                android:id="@+id/tv_firstSeenIn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="8dp"
-                android:text="@string/first_seen_in"
-                android:textSize="34sp"
-                android:textStyle="italic"
-                app:layout_constraintBottom_toTopOf="@+id/tv_origin"
-                app:layout_constraintEnd_toEndOf="@id/tv_name"
-                app:layout_constraintStart_toStartOf="@id/tv_name"
-                app:layout_constraintTop_toBottomOf="@+id/tv_location" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
